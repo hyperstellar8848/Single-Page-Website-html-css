@@ -1,0 +1,213 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0; /* imp *** */
+    font-family: 'Segoe UI', sans-serif; /*if first font wasent installed, use 2nd, 3rd, ...*/
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/*Sticky Header */
+.main-header {
+    position: sticky;
+    top: 0;
+    background: #001f3f; /* navy blue */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    z-index: 1000;
+}
+.main-header .logo img {
+    width: 30px;
+    height: auto;
+}
+
+.main-header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* gradient on text */
+.gradient-text {
+    font-size: 3rem;
+    background: linear-gradient(45deg, #001f3f, #0074D9);
+    -webkit-background-clip: text; /* vagarne faqat rang boud, no text */
+    -webkit-text-fill-color: transparent; /* needed for gradient*/
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-circle {
+    width: 250px;
+    height: 250px;
+    background: #ddd;
+    border-radius: 50%;
+}
+
+.btn {
+    padding: 5px 25px;
+    background: #0074D9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Skills Section */
+.skills {
+    text-align: left; 
+    padding: 75px 70px; 
+    background-color: #f4f4f4; 
+}
+
+.skills h2 {
+    margin-bottom: 30px; 
+    color: #333;
+}
+
+.skills-grid {
+    display: flex;           
+    justify-content: center;  
+    gap: 20px;   /* adds space between skill cards */
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex: 1;  /* allows cards to grow and shrink! important!!! */
+    min-width: 150px;       
+    max-width: 250px;         
+    text-align: center;        
+    color: #001f3f;           
+    font-weight: bold;
+}
+
+/* Carousel */
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.cards-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 166%; /* To fit 5 cards, where 3 are visible at a time */
+}
+
+input[type="radio"] { display: none; }
+
+/* Carousel movement... */
+#s1:checked ~ .cards-wrapper { transform: translateX(0%); }
+#s2:checked ~ .cards-wrapper { transform: translateX(-20%); }
+#s3:checked ~ .cards-wrapper { transform: translateX(-40%); }
+
+/* glassmorphism */
+.card.glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card.glass .project-image {
+    max-width: 100%; 
+    height: 150px; 
+    margin-bottom: 15px; /* Space between the image and the text below */
+    display: block; /* Removes extra space below the image  IMPORTANT!!!!!!!!*/
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+details {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* styling of the SEND MESSAGE button */
+.contact-form-button {
+    background-color: #001f3f;
+    color: white;             /* text color white */
+    padding: 12px 20px;       
+    border: none;             /* Removes the default border */
+    border-radius: 4px; 
+    cursor: pointer;          /* cursor changes to  pointer, on hover */
+    font-size: 16px;        
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* another hover effect, for color this time*/
+.contact-form-button:hover {
+    background-color: #003366; /* Slightly lighter dark blue on hover */
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px; 
+    background: #001f3f;
+    color: white;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; /*center content vertically*/
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* gap between ble and whatsapp icons */
+}
+
+.footer-image {
+    max-width: 35px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.footer-right {
+    margin-left: 250px;
+}
