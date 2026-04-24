@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <img src="images/7.ico" alt="My Portfolio Logo">
+        </div>
+
+        <nav>
+            <a href="#hero">Hero</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="gradient-text">Hello, I am Parmida Beiki</h1>
+            <p>Passionate about web design.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn">Hire Me</a>
+                <a href="#projects" class="btn btn-alt">View Work</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="images/1.ico" alt="A descriptive text for your hero image">
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">REACT</div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        
+        <div class="carousel-container">
+            <input type="radio" name="slider" id="s1" checked>
+            <input type="radio" name="slider" id="s2">
+            <input type="radio" name="slider" id="s3">
+
+            <div class="cards-wrapper">
+                <label for="s1" class="card glass">
+                    <img src="images/8.ico" alt="book 1" class="project-image">
+                    <h3>Project 1</h3>
+                    <p>Web App Design</p>
+                </label>
+                <label for="s1" class="card glass">
+                    <img src="images/3.ico" alt="book 1" class="project-image">
+                    <h3>Project 2</h3>
+                    <p>AI Assistant UI</p>
+                </label>
+                <label for="s2" class="card glass">
+                    <img src="images/9.ico" alt="book 1" class="project-image">
+                    <h3>Project 3</h3>
+                    <p>exp 1</p>
+                </label>
+                <label for="s2" class="card glass">
+                    <img src="images/6.ico" alt="book 1" class="project-image">
+                    <h3>Project 4</h3>
+                    <p>exp 2</p>
+                </label>
+                <label for="s3" class="card glass">
+                    <img src="images/4.ico" alt="book 1" class="project-image">
+                    <h3>Project 5</h3>
+                    <p>exp 3</p>
+                </label>
+            </div>
+
+            <div class="carousel-controls">
+                <label for="s1">❮</label>
+                <label for="s2"> ... </label>
+                <label for="s3">❯</label>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <h2>FAQ</h2>
+        <div class="accordion">
+            <details>
+                <summary>What is your tech stack?</summary>
+                <p>I focus on HTML, CSS, and REACT</p>
+            </details>
+            <details>
+                <summary>Are you available for freelance?</summary>
+                <p>Yes, I am looking for projects.</p>
+            </details>
+            <details>
+                <summary>What are your future aspirations in tech?</summary>
+                <p>I am passionate about the integration of AI into daily life.</p>
+            </details>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <label>
+                <input type="checkbox" required> I agree to the terms
+            </label>
+            <button type="submit"class="contact-form-button">SEND MESSAGE</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <img src="images/ble.png" alt="Bale Icon" class="footer-image">
+            <img src="images/whatsapp.jpg" alt="WhatsApp Icon" class="footer-image">
+        </div>
+        <div class="footer-right">
+            <p>&copy; My Portfolio 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
